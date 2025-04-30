@@ -1,0 +1,123 @@
+<Doctype html>
+    <html Lang="en">
+        <head>
+            <meta charset="UTF-8">
+            <title>calculator</title>
+            <style>
+                  body{
+    background: wheat;
+    justify-content: center;
+    align-items: center;
+}
+img{
+    width: 50px;
+}
+.container{
+    background: rgba(10, 10, 15, 0.4);
+    border-radius: 10px;
+    align-items: center;
+    text-align: center;
+    justify-content: center;
+    margin: 20px auto;
+    width: 340px;
+    height: 480px;
+    display: block;
+    padding: 10px;
+    position: relative;
+    overflow: hidden;
+}
+.more-section{
+    position: absolute;
+    width: 100%;
+    transform: translate(-20px, -355px);
+}
+input{
+    width: 302px;
+    height: 72px;
+    border-radius: 5px;
+    position: center;
+    font-size:45px;
+    left: 1.5px;
+    right:1.5px;
+    background: rgba(10, 10, 25, 0.3);
+    color: white;
+    text-align: right;
+    box-shadow:none;
+    font-size:30px;
+    border:0px;
+    flex:1px;
+    margin-top: 10px;
+    outline:none;
+}
+.button input{
+    background: transparent;
+    color: white;
+    font-size:25px;
+    width: 63px;
+    height: 63px;
+    border-radius: 20px;
+    padding: 1px;
+    outline:none;
+    border:0px;
+    box-shadow:5px 5px 5px #3b3b3b, 3px 3px 15px 5px #302f2f;
+    margin:4px;
+    cursor: pointer;
+    text-align: center;
+}
+ .button input.ans{
+    color: #fff100;
+    width: 142px;
+}
+form .display{
+    display:flex;
+    justify-content: flexend;
+}
+.button input.color{
+    color: #00eeff;
+    
+}
+.button input.design{
+ color: #ff0034;   
+}
+
+            </style>
+        </head>
+ <body>
+     <div class="container">
+         <div class="calculator">
+             <form>
+               <input type="text" id="display">
+             </form>
+         </div>
+     <div class="button">
+           <input type="button"class="color" value="Ac" onclick="(display) .value=''">
+           <input type="button" value="De" onclick="(display) .value=(display). value.slice(0,-1)" class="color">
+           <input type="button" value="." onclick="(display) .value+='.'" class="color">
+           <input type="button" value="/" onclick="(display) .value+='/'" class="design">
+     </div>
+     <div class="button">
+           <input type="button" value="7" onclick="(display) .value+='7'">
+           <input type="button" value="8" onclick="(display) .value+='8'">
+           <input type="button" value="9" onclick="(display) .value+='9'">
+           <input type="button" value="×" onclick="(display) .value+='*'" class="design">
+     </div>
+     <div class="button">
+           <input type="button" value="4" onclick="(display) .value+='4'">
+           <input type="button" value="5" onclick="(display) .value+='5'">
+           <input type="button" value="6" onclick="(display) .value+='6'">
+           <input type="button" value="+" onclick="(display) .value+='+'" class="design">
+     </div>
+     <div class="button">
+           <input type="button" value="1" onclick="(display) .value+='1'">
+           <input type="button" value="2" onclick="(display) .value+='2'">
+           <input type="button" value="3" onclick="(display) .value+='3'">
+           <input type="button" value="-" onclick="(display) .value+='-'" class="design">
+     </div>
+     <div class="button">
+           <input type="button" value="0" onclick="(display) .value+='0'">
+           <input type="button" value="00" onclick="(display) .value+='00'">
+           <input type="button" class="ans" value="Ans"onclick="(display) .value=eval((display) .value)">
+     </div>
+     </div>
+ </body>
+ </html>
